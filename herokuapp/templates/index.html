@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ML API</title>
+</head>
+<body>
+	<div class='login'>
+		<h1> Predict Bank Note Authentication</h1>
+		<form action="{{url_for('predict')}}" method='post'>
+			<input type="text" name="variance" placeholder="Variance" required="required">
+			<input type="text" name="curtosis"placeholder="curtosis" required="required">
+			<input type="text" name="skewness" placeholder="skewness" required="required">
+			<input type="text" name="entropy" placeholder="required">
+			<button type="submit">Predict</button>
+		</form>
+		<br>
+		<br>
+		{{ prediction_text }}
+	</div>
+</body>
+</html>
